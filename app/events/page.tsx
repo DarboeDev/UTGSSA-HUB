@@ -28,6 +28,7 @@ interface Event {
   date: string;
   time: string;
   location: string;
+  image?: string;
   createdAt: string;
 }
 
@@ -227,8 +228,19 @@ export default function EventsPage() {
                     key={event._id}
                     className="group relative bg-white/90 backdrop-blur-md rounded-3xl overflow-hidden hover:bg-white/95 transition-all duration-500 shadow-xl hover:shadow-2xl transform hover:-translate-y-4 border border-white/40 hover:border-white/60"
                   >
-                    {/* Event Header */}
-                    <div className="relative p-6 bg-gradient-to-br from-blue-600/10 to-purple-600/10">
+                    {/* Event Image */}
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={
+                          event.image
+                            ? `https://utgssa-backend.onrender.com${event.image}`
+                            : "/images/picture2.jpg"
+                        }
+                        alt={event.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+
                       {/* Status Badge */}
                       <div className="absolute top-4 right-4">
                         <span
@@ -241,7 +253,10 @@ export default function EventsPage() {
                           {isUpcoming ? "Upcoming" : "Past Event"}
                         </span>
                       </div>
+                    </div>
 
+                    {/* Event Header */}
+                    <div className="relative p-6">
                       {/* Event Icon */}
                       <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                         <Calendar className="h-8 w-8 text-white" />
