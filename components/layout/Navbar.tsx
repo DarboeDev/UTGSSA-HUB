@@ -37,7 +37,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 py-2 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 py-2 z-[9999] transition-all duration-300 ${
         scrolled
           ? "bg-white/95 backdrop-blur-md shadow-lg"
           : "bg-white/90 backdrop-blur-sm shadow-md"
@@ -101,7 +101,10 @@ export default function Navbar() {
             <button
               type="button"
               className="p-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors duration-200"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              onClick={() => {
+                console.log('Mobile menu clicked, current state:', mobileMenuOpen);
+                setMobileMenuOpen(!mobileMenuOpen);
+              }}
             >
               <span className="sr-only">Toggle menu</span>
               {mobileMenuOpen ? (
@@ -114,16 +117,22 @@ export default function Navbar() {
         </div>
 
         {/* Mobile menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden border-t border-gray-100 bg-white/95 backdrop-blur-sm">
-            <div className="py-2 space-y-1">
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            mobileMenuOpen 
+              ? "max-h-screen opacity-100" 
+              : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="border-t border-gray-200 bg-white/95 backdrop-blur-sm shadow-lg">
+            <div className="py-4 space-y-1">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`block px-4 py-3 text-base font-medium transition-colors duration-200 ${
+                  className={`block px-6 py-3 text-base font-medium transition-colors duration-200 ${
                     isActive(item.href)
-                      ? "text-blue-600 bg-blue-50 border-r-2 border-blue-600"
+                      ? "text-blue-600 bg-blue-50 border-r-4 border-blue-600"
                       : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
@@ -133,13 +142,13 @@ export default function Navbar() {
               ))}
 
               {/* Mobile Resources CTA */}
-              <div className="px-4 pt-2">
+              <div className="px-6 pt-2 pb-2">
                 <Link
                   href="/resources"
                   className={`block w-full text-center py-3 text-base font-medium transition-colors duration-200 rounded-lg ${
                     isActive("/resources")
                       ? "bg-blue-600 text-white"
-                      : "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+                      : "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg"
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -148,7 +157,7 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-        )}
+        </div>
       </nav>
     </header>
   );

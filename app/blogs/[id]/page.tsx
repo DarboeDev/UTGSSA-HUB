@@ -87,7 +87,7 @@ export default function BlogDetailPage() {
 
   if (!blog) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br pt-[100px] from-slate-900 via-blue-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center px-4">
           <div className="mb-8">
             <h1 className="text-6xl md:text-8xl font-bold">

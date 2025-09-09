@@ -16,6 +16,7 @@ import {
   Linkedin,
   Link2,
 } from "lucide-react";
+import Loader from "@/components/ui/Loader";
 
 interface Event {
   _id: string;
@@ -146,14 +147,7 @@ export default function EventDetail() {
   };
 
   if (loading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white mb-4 mx-auto"></div>
-          <p className="text-white text-xl">Loading event...</p>
-        </div>
-      </div>
-    );
+    return <Loader text="Loading event..." fullScreen />;
   }
 
   if (!event) {
