@@ -892,7 +892,7 @@ function DataManagement({
   onDelete: (id: string) => void;
   searchTerm: string;
   setSearchTerm: (term: string) => void;
-  renderItem: (item: any) => JSX.Element;
+  renderItem: (item: any) => React.JSX.Element;
 }) {
   // Ensure data is always an array
   const safeData = Array.isArray(data) ? data : [];
