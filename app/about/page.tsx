@@ -381,52 +381,52 @@ export default function About() {
             <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-cyan-600 rounded-3xl transform rotate-1 opacity-5"></div>
             <div className="absolute inset-0 bg-gradient-to-tl from-purple-600 via-blue-600 to-indigo-600 rounded-3xl transform -rotate-1 opacity-5"></div>
 
-            <div className="relative bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl p-16 border border-gray-200 overflow-hidden">
+            <div className="relative bg-white/90 backdrop-blur-xl rounded-2xl md:rounded-3xl shadow-2xl p-8 md:p-16 border border-gray-200 overflow-hidden">
               {/* Decorative elements */}
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full blur-3xl opacity-60 animate-pulse"></div>
-              <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-full blur-2xl opacity-50 animate-float"></div>
+              <div className="absolute -top-10 -right-10 w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full blur-2xl md:blur-3xl opacity-60 animate-pulse"></div>
+              <div className="absolute -bottom-10 -left-10 w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-full blur-xl md:blur-2xl opacity-50 animate-float"></div>
 
               <div className="relative">
-                <div className="text-center mb-16">
-                  <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-10 shadow-2xl animate-bounce-slow">
-                    <Mail className="h-12 w-12 text-white" />
+                <div className="text-center mb-12 md:mb-16">
+                  <div className="inline-flex items-center justify-center w-20 h-20 md:w-24 md:h-24 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-8 md:mb-10 shadow-2xl animate-bounce-slow">
+                    <Mail className="h-10 w-10 md:h-12 md:w-12 text-white" />
                   </div>
-                  <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-8">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6 md:mb-8">
                     Get in Touch
                   </h2>
-                  <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+                  <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6 md:mb-8 px-4">
                     Ready to join our community or have questions? We're here to
                     help and excited to hear from you!
                   </p>
                   <div className="flex justify-center">
-                    <div className="w-32 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-full"></div>
+                    <div className="w-24 md:w-32 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-full"></div>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
                   {/* Address Card */}
                   <div className="group relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl transform rotate-2 group-hover:rotate-6 transition-all duration-500 opacity-10"></div>
-                    <div className="relative bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-700 border border-gray-100 hover:border-blue-200 transform hover:-translate-y-6">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl md:rounded-3xl transform rotate-1 group-hover:rotate-3 transition-all duration-500 opacity-10"></div>
+                    <div className="relative bg-white rounded-2xl md:rounded-3xl p-6 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-700 border border-gray-100 hover:border-blue-200 transform hover:-translate-y-2 md:hover:-translate-y-6">
                       <div className="text-center">
-                        <div className="relative mb-8">
-                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                          <div className="relative w-24 h-24 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-2xl">
-                            <MapPin className="h-12 w-12 text-white" />
+                        <div className="relative mb-6 md:mb-8">
+                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full blur-xl md:blur-2xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                          <div className="relative w-16 h-16 md:w-24 md:h-24 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-xl md:shadow-2xl">
+                            <MapPin className="h-8 w-8 md:h-12 md:w-12 text-white" />
                           </div>
                         </div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-6 group-hover:text-blue-600 transition-colors">
+                        <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 group-hover:text-blue-600 transition-colors">
                           Visit Us
                         </h3>
-                        <div className="space-y-2 text-gray-600 text-lg leading-relaxed">
+                        <div className="space-y-2 text-gray-600 text-base md:text-lg leading-relaxed">
                           <p className="font-semibold text-gray-800">
                             University of The Gambia
                           </p>
                           <p>Faraba Campus</p>
                           <p>Science Building, Room 105</p>
                         </div>
-                        <div className="mt-8 flex justify-center">
-                          <div className="w-16 h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div className="mt-6 md:mt-8 flex justify-center">
+                          <div className="w-12 md:w-16 h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         </div>
                       </div>
                     </div>
@@ -434,31 +434,31 @@ export default function About() {
 
                   {/* Email Card */}
                   <div className="group relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-purple-600 rounded-3xl transform -rotate-2 group-hover:-rotate-6 transition-all duration-500 opacity-10"></div>
-                    <div className="relative bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-700 border border-gray-100 hover:border-purple-200 transform hover:-translate-y-6">
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl md:rounded-3xl transform -rotate-1 group-hover:-rotate-3 transition-all duration-500 opacity-10"></div>
+                    <div className="relative bg-white rounded-2xl md:rounded-3xl p-6 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-700 border border-gray-100 hover:border-purple-200 transform hover:-translate-y-2 md:hover:-translate-y-6">
                       <div className="text-center">
-                        <div className="relative mb-8">
-                          <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                          <div className="relative w-24 h-24 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-2xl">
-                            <Mail className="h-12 w-12 text-white" />
+                        <div className="relative mb-6 md:mb-8">
+                          <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full blur-xl md:blur-2xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                          <div className="relative w-16 h-16 md:w-24 md:h-24 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-xl md:shadow-2xl">
+                            <Mail className="h-8 w-8 md:h-12 md:w-12 text-white" />
                           </div>
                         </div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-6 group-hover:text-purple-600 transition-colors">
+                        <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 group-hover:text-purple-600 transition-colors">
                           Email Us
                         </h3>
                         <div className="text-center">
                           <a
                             href="mailto:info@utgsciencesa.gm"
-                            className="text-lg text-purple-600 hover:text-purple-700 font-semibold transition-colors hover:underline decoration-2 underline-offset-4"
+                            className="text-base md:text-lg text-purple-600 hover:text-purple-700 font-semibold transition-colors hover:underline decoration-2 underline-offset-4 break-all md:break-normal"
                           >
                             info@utgsciencesa.gm
                           </a>
-                          <p className="text-gray-600 mt-4">
+                          <p className="text-gray-600 mt-3 md:mt-4 text-sm md:text-base">
                             We typically respond within 24 hours
                           </p>
                         </div>
-                        <div className="mt-8 flex justify-center">
-                          <div className="w-16 h-1 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div className="mt-6 md:mt-8 flex justify-center">
+                          <div className="w-12 md:w-16 h-1 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         </div>
                       </div>
                     </div>
@@ -466,31 +466,31 @@ export default function About() {
 
                   {/* Phone Card */}
                   <div className="group relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-3xl transform rotate-2 group-hover:rotate-6 transition-all duration-500 opacity-10"></div>
-                    <div className="relative bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-700 border border-gray-100 hover:border-cyan-200 transform hover:-translate-y-6">
+                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl md:rounded-3xl transform rotate-1 group-hover:rotate-3 transition-all duration-500 opacity-10"></div>
+                    <div className="relative bg-white rounded-2xl md:rounded-3xl p-6 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-700 border border-gray-100 hover:border-cyan-200 transform hover:-translate-y-2 md:hover:-translate-y-6">
                       <div className="text-center">
-                        <div className="relative mb-8">
-                          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                          <div className="relative w-24 h-24 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-2xl">
-                            <Phone className="h-12 w-12 text-white" />
+                        <div className="relative mb-6 md:mb-8">
+                          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full blur-xl md:blur-2xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                          <div className="relative w-16 h-16 md:w-24 md:h-24 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-xl md:shadow-2xl">
+                            <Phone className="h-8 w-8 md:h-12 md:w-12 text-white" />
                           </div>
                         </div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-6 group-hover:text-cyan-600 transition-colors">
+                        <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 group-hover:text-cyan-600 transition-colors">
                           Call Us
                         </h3>
                         <div className="text-center">
                           <a
                             href="tel:+2201234567"
-                            className="text-lg text-cyan-600 hover:text-cyan-700 font-semibold transition-colors hover:underline decoration-2 underline-offset-4"
+                            className="text-base md:text-lg text-cyan-600 hover:text-cyan-700 font-semibold transition-colors hover:underline decoration-2 underline-offset-4"
                           >
                             +220 123 4567
                           </a>
-                          <p className="text-gray-600 mt-4">
+                          <p className="text-gray-600 mt-3 md:mt-4 text-sm md:text-base">
                             Available Mon-Fri, 9AM-5PM
                           </p>
                         </div>
-                        <div className="mt-8 flex justify-center">
-                          <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div className="mt-6 md:mt-8 flex justify-center">
+                          <div className="w-12 md:w-16 h-1 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         </div>
                       </div>
                     </div>
@@ -498,18 +498,12 @@ export default function About() {
                 </div>
 
                 {/* CTA Section */}
-                <div className="text-center mt-16">
-                  <div className="inline-flex space-x-4">
-                    {/* <button className="group bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
-                      <span className="flex items-center">
-                        Join Our Community
-                        <Users className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                      </span>
-                    </button> */}
-                    <button className="group bg-white/80 backdrop-blur-sm hover:bg-white text-gray-800 font-semibold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 border border-gray-200 hover:border-gray-300 shadow-lg hover:shadow-xl">
-                      <span className="flex items-center">
+                <div className="text-center mt-12 md:mt-16">
+                  <div className="inline-flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                    <button className="group bg-white/80 backdrop-blur-sm hover:bg-white text-gray-800 font-semibold py-3 md:py-4 px-6 md:px-8 rounded-full transition-all duration-300 transform hover:scale-105 border border-gray-200 hover:border-gray-300 shadow-lg hover:shadow-xl">
+                      <span className="flex items-center justify-center">
                         Download Brochure
-                        <BookOpen className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                        <BookOpen className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />
                       </span>
                     </button>
                   </div>

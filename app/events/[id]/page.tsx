@@ -238,7 +238,7 @@ export default function EventDetail() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative h-96 sm:h-[28rem] overflow-hidden mt-16 sm:mt-20">
+      <section className="relative h-96 sm:h-[28rem] overflow-hidden pt-20 sm:pt-24">
         {/* Background Image Carousel */}
         <div className="absolute inset-0">
           {Array.from({ length: backgroundImageCount }).map((_, index) => (
