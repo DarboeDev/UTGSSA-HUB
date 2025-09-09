@@ -57,7 +57,9 @@ export default function NewsDetailPage() {
 
   const fetchNews = async (id: string) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/news/${id}`);
+      const response = await fetch(
+        `https://utgssa-backend.onrender.com/api/news/${id}`
+      );
       if (response.ok) {
         const data = await response.json();
         setNews(data);

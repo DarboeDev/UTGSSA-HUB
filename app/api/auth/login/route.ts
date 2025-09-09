@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
 
     // Forward the login request to the backend
     const backendResponse = await fetch(
-      "http://localhost:5000/api/auth/login",
+      "https://utgssa-backend.onrender.com/api/auth/login",
       {
         method: "POST",
         headers: {

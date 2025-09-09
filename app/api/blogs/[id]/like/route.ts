@@ -6,7 +6,7 @@ export async function POST(
 ) {
   try {
     const response = await fetch(
-      `http://localhost:5000/api/blogs/${params.id}/like`,
+      `https://utgssa-backend.onrender.com/api/blogs/${params.id}/like`,
       {
         method: "POST",
         headers: {

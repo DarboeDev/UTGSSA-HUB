@@ -174,7 +174,9 @@ export default function Leaders() {
   const getExecutiveTeam = async () => {
     // Fetch executive team data from the API
     try {
-      const response = await fetch("http://localhost:5000/api/leaders");
+      const response = await fetch(
+        "https://utgssa-backend.onrender.com/api/leaders"
+      );
       const data = await response.json();
       setExecutiveTeam(data);
     } catch (error) {

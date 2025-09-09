@@ -56,7 +56,9 @@ export default function EventsPage() {
 
   const fetchEvents = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/events");
+      const response = await fetch(
+        "https://utgssa-backend.onrender.com/api/events"
+      );
       if (response.ok) {
         const data = await response.json();
         setEvents(data);

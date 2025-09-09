@@ -87,7 +87,9 @@ export default function ResourcesPage() {
 
   const fetchResources = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/resources");
+      const response = await fetch(
+        "https://utgssa-backend.onrender.com/api/resources"
+      );
       if (response.ok) {
         const data = await response.json();
         setResources(data);
@@ -121,7 +123,7 @@ export default function ResourcesPage() {
   const handleDownload = async (resourceId: string) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/resources/${resourceId}`
+        `https://utgssa-backend.onrender.com/api/resources/${resourceId}`
       );
       if (response.ok) {
         const resource = await response.json();

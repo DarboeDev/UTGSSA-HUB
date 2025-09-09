@@ -88,7 +88,7 @@ export default function EventDetail() {
     const fetchEvent = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/events/${params.id}`
+          `https://utgssa-backend.onrender.com/api/events/${params.id}`
         );
         if (response.ok) {
           const data = await response.json();
@@ -300,7 +300,7 @@ export default function EventDetail() {
         {event.image && (
           <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
             <img
-              src={`http://localhost:5000${event.image}`}
+              src={`https://utgssa-backend.onrender.com${event.image}`}
               alt={event.title}
               className="w-full h-96 object-cover"
             />

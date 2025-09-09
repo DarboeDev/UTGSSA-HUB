@@ -6,7 +6,7 @@ export async function GET(
 ) {
   try {
     const response = await fetch(
-      `http://localhost:5000/api/blogs/${params.id}`,
+      `https://utgssa-backend.onrender.com/api/blogs/${params.id}`,
       {
         method: "GET",
         headers: {
@@ -45,7 +45,7 @@ export async function PUT(
     const body = await request.json();
 
     const response = await fetch(
-      `http://localhost:5000/api/blogs/${params.id}`,
+      `https://utgssa-backend.onrender.com/api/blogs/${params.id}`,
       {
         method: "PUT",
         headers: {
@@ -81,7 +81,7 @@ export async function DELETE(
 ) {
   try {
     const response = await fetch(
-      `http://localhost:5000/api/blogs/${params.id}`,
+      `https://utgssa-backend.onrender.com/api/blogs/${params.id}`,
       {
         method: "DELETE",
       }

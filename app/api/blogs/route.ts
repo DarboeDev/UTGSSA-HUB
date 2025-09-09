@@ -17,7 +17,7 @@ export async function GET(request: NextRequest) {
     if (limit) queryParams.append("limit", limit);
 
     const queryString = queryParams.toString();
-    const url = `http://localhost:5000/api/blogs${
+    const url = `https://utgssa-backend.onrender.com/api/blogs${
       queryString ? `?${queryString}` : ""
     }`;
 
@@ -62,13 +62,16 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     console.log("Creating blog with data:", body);
 
-    const response = await fetch("http://localhost:5000/api/blogs", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
-    });
+    const response = await fetch(
+      "https://utgssa-backend.onrender.com/api/blogs",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body),
+      }
+    );
 
     if (!response.ok) {
       const errorData = await response.text();

@@ -60,7 +60,7 @@ export default function UpcomingEvents() {
         }
 
         let data = await response.json();
-        
+
         // If no upcoming events, fall back to recent events
         if (!data || data.length === 0) {
           response = await fetch("/api/events?limit=3");
@@ -72,7 +72,7 @@ export default function UpcomingEvents() {
         } else {
           setIsUpcoming(true); // We're showing upcoming events
         }
-        
+
         setEvents(data || []);
       } catch (err) {
         console.error("Error fetching events:", err);
@@ -186,10 +186,9 @@ export default function UpcomingEvents() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            {isUpcoming 
+            {isUpcoming
               ? "Join us for exciting events, workshops, and seminars designed to enhance your academic journey and connect with the scientific community."
-              : "Explore our recent events and activities. Stay tuned for more upcoming opportunities to engage with the scientific community."
-            }
+              : "Explore our recent events and activities. Stay tuned for more upcoming opportunities to engage with the scientific community."}
           </p>
         </div>
 
